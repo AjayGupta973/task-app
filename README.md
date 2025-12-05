@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# 🚀 Ajay App Store - E-Commerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a functional e-commerce web application built to fulfill the given assignment requirements. It demonstrates React application architecture, state management with MobX + Context API, dynamic routing, persistent cart state, URL-based filters, and automated E2E testing using Cypress.
 
-## Available Scripts
+## 📌 Summary
 
-In the project directory, you can run:
+Users can:
 
-### `npm start`
+- View a list of products fetched from FakeStore API
+- Filter products by category and sort by price
+- Share URLs with filters preserved (refresh/back button safe)
+- View detailed product information via dynamic route
+- Add items to the shopping cart
+- Remove items from the cart
+- See cart total and item count persist 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is responsive and built entirely using **React functional Components** with inline CSS, as required.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧰 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Feature | Technology |
+|--------|------------|
+| UI Library | React (Class Components Only) |
+| Router | React Router DOM |
+| State Management | MobX + Context API |
+| Styling | Inline CSS |
+| API | https://fakestoreapi.com |
+| Persistence | sessionStorage |
+| E2E Testing | Cypress |
+| Build Tool | Create React App |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Product listing homepage  
+2. Dynamic product details page (`/product/:id/details`)  
+3. Add item to cart  
+4. Remove item from cart (quantity-aware)  
+5. Multiple category filters (checkboxes)  
+6. Price sorting (Low→High / High→Low)  
+7. Filter & sorting synced in URL query params  
+8. Full browser navigation compatibility  
+9. Shareable filter state from URL  
+10. Persistent cart using `sessionStorage`  
+11. Cypress E2E test covering main flow  
+12. Mobile-responsive inline styling  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔗 URL-Based Filter Example
 
-### `npm run eject`
+http://localhost:3000/?categories=electronics,jewelery&sort=price_desc
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Opening this URL on another device loads the **exact same filtered and sorted view**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Folder Structure
+src/
+│── App.js
+│── index.js
+│── api.js
+│
+├── components/
+│ ├── Header.js
+│ ├── Footer.js
+│ └── ProductCard.js
+│
+├── pages/
+│ ├── HomePage.js
+│ ├── ProductDetailPage.js
+│ └── CartPage.js
+│
+├── context/
+│ └── CartContext.js
+│
+└── store/
+└── CartStore.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Installation & Running
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install
 
-### Code Splitting
+### Run the 
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+http://localhost:3000
 
-### Analyzing the Bundle Size
+## Launch Cypress UI
+npx cypress open
+npx cypress run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Developed By
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ajay Gupta
+Frontend Developer
